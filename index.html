@@ -6,31 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="prem">
-        <nav>
-            <img src="Prem.png" class="logo" height="120px" width="150px">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SKILLS</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">HIRE ME</a></li>
-            </ul>
-        </nav>
-        <div class="detail">
-            <h1><span>I'm</span> PREM <span>PRAKASH</span><br>PANDEY</h1>
-            <p>Hey Techies,this is my Official Portfolio to shows all
-                <br>Details and Work experience in the Frontend WebDev. 
-            </p>
-            <a href="https://www.linkedin.com/in/prem-prakash-pandey-a23776212/">CONNECT ME</a>
+        <!-- <section id="first-header">
+            <a href="#"><img src="Prem.png" class="logo"></a>
+
+            <nav>
+                <ul id="navbar">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SKILLS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">HIRE ME</a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                </ul>
+            </nav>
+
+            <div id="mobile">
+                <i id="hamburger" class="fas fa-outdent"></i>    
+            </div>
+
+        </section> -->
+
+        <div class="prem">
+            <nav id="navi">
+                <img src="Prem.png" class="logo">
+                <ul id="navbar">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#about-me">ABOUT</a></li>
+                    <li><a href="#my-skills">SKILLS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">HIRE ME</a></li>
+                    <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                </ul>
+            </nav>
+            <div id="mobile">
+                <i id="hamburger" class="fas fa-outdent"></i>    
+            </div>
         </div>
-        <div class="image">
-            <img src="bg5.png" class="bg">
-            <img src="me.png" class="Me">
+
+        <div class="profile">
+            <div class="detail">
+                <h2><span>I'm</span> PREM <span>PRAKASH</span><br>PANDEY</h2>
+                <p>Hey Techies,this is my Official Portfolio to shows all
+                    <br>Details and Work experience in the Frontend WebDev. 
+                </p>
+                <div class="con-1">
+                    <a href="https://www.linkedin.com/in/prem-prakash-pandey-a23776212/">CONNECT WITH ME</a>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="me.png" class="Me">
+            </div>
         </div>
-        <section class="about">
+
+         <section class="about" id="about-me">
             <div  class="main">
                 <img src="us.png" alt="">
                 <div class="about-text">
@@ -48,7 +80,7 @@
             </div>
         </section>
         <div class="inner">
-            <div class="header">
+            <div class="header" id="my-skills">
                 <h1>SKILLS</h1>
             </div>
             <div class="container">
@@ -124,9 +156,12 @@
                 </div>
             </div>
         </div>
+
         <div class="contact">
             <p>Let me Get you a Beautiful Webpage.</p>
             <a class="button-two" href="#">Hire Me</a>
-        </div>
+        </div> 
+
+        <script src="script.js"></script>
 </body>
 </html>
