@@ -17,9 +17,9 @@ body{
     position: relative;
 }
 .prem{
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background: rgb(241, 245, 245);
 }
 .header:after{
@@ -36,9 +36,16 @@ nav{
     display: flex;
     width: 88%;
     margin: auto;
-    padding:10px 0px;
+    padding:0px 60px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    /* height="120px" width="150px" */
+    height: 120px;
+    width:120px;
 }
 nav ul li{
     display: inline-block;
@@ -49,6 +56,7 @@ nav ul li a{
     text-decoration: none;
     color: black;
     font-weight: bold;
+    transition: 0.3s all;
 }
 nav ul li a:hover{
     color: rgb(252, 173, 4);
@@ -58,7 +66,7 @@ nav ul li a:hover{
     margin-left: 8%;
     margin-top:13%;
 }
-.detail H1{
+.detail h2{
     font-size: 50px;
     color: black;
     margin-bottom: 20px;
@@ -80,49 +88,68 @@ span{
     margin: 30px 0px;
     border-radius: 15px;
 }
-.bg{
+/* .bg{
     height: 530px;
     width: 430px;
+} */
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    margin-bottom: -13px;
+    background:rgb(241, 245, 245);
+    /* height:200vh; */
+    /* gap:100px ; */
 }
+
+
 .Me{
-    height: 570px;
-    width: 355px;
+    height: 30em;
+    width: 22em;
+    /* width: 100%; */
 }
 .image{
     width:40%;
-    height:80%;
-    position: absolute;
-    bottom: 0px;
-    right: 100px;
 }
 
-.image img{
+
+#mobile{
+    display: none;
+}
+
+#close{
+    display: none;
+    text-decoration: none;
+}
+
+/* .image img{
     position: absolute;
     left: 50%;
     bottom: 0%;
     transform: translateX(-50%);
     transition: bottom 1s, left 1s;
-}
-.image:hover .bg{
+} */
+
+/* .image:hover .bg{
     bottom: 50px;
 }
 .image:hover .Me{
     left:45%;
-}
+} */
 
 .about{
     width:100%;
     padding:100px 0px;
     background-color:rgb(252, 167, 9);
-
+    
 }
 .about img{
-    height: auto;
-    width: 430px;
+    /* height: auto; */
+    width: 50%;
 }
-.about-text{
-    width: 550px;
-}
+
 .main{
     width: 1130px;
     max-width: 95%;
@@ -180,6 +207,7 @@ button:hover{
     color:#191919;
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
     margin-bottom: 25px;
 }
 .contact .button-two{
@@ -209,10 +237,9 @@ button:hover{
     font-size: 1.2rem;
 }
 .skill-box{
-    padding: 1rem;
     color:rgb(252, 167, 9);
     cursor: pointer;
-
+    
 }
 .skill-title{
     display: flex;
@@ -220,7 +247,7 @@ button:hover{
     align-items: center;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
-
+    
 }
 .img{
     width: 90px;
@@ -248,7 +275,106 @@ button:hover{
     color: white;
     line-height: 30px;
 }
+
 .skill-icon{
     width: 50px;
     z-index: 2;
+}
+
+@media (max-width:908px) {
+    nav{
+        padding: 9px 0px;
+    }
+    
+    .profile{
+        padding: 10px 0px;
+    }
+}
+@media (max-width:740px) {
+    .prem{
+        display: flex;
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 200px;
+        background-color: rgb(252, 167, 9);
+        box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.9s;
+    }
+    
+    nav ul li a:hover{
+        color: rgb(252, 4, 66);
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+    
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        margin-right: 5px;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 38px;
+        color: black;
+        font-size: 24px;
+    }
+    .con-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+}
+
+@media (max-width:846px) {
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .profile{
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+}
+@media (max-width:709px) {
+    /* .image{
+        width: 100%;
+    } */
+    .main {
+        flex-direction: column;
+    }
+    .logo{
+        width:95px ;
+    }
+}
+@media (max-width:502px) {
+    .detail h2 {
+        text-align: center;
+        line-height: 56px;
+        font-size: 40px;
+    }
+    .logo{
+        width:95px ;
+    }
 }
